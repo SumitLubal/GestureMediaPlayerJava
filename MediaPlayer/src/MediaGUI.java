@@ -77,7 +77,8 @@ public class MediaGUI extends JFrame implements ActionListener, ChangeListener ,
 	File mp3files[];
 	int mp3Count = 0, flg = 0;
 	long count=0;
-	static String vlcPath ="C:\\Program Files (x86)\\VideoLAN\\VLC";
+	//static String vlcPath ="C:\\Program Files (x86)\\VideoLAN\\VLC";
+	static String vlcPath ="C:\\Program Files\\VideoLAN\\VLC";
 	JPanel panel2;
 	int currentTime, totleTime;
 	Thread timer;
@@ -638,7 +639,7 @@ class GestureWebCam implements WebcamImageTransformer, WebcamMotionListener
 	public GestureWebCam(MediaGUI mediaPlayer) 
 	{
 
-		webcam = Webcam.getWebcams().get(1);
+		webcam = Webcam.getWebcams().get(0);
 		webcam.setViewSize(WebcamResolution.VGA.getSize());
 		webcam.setImageTransformer((WebcamImageTransformer) this);
 		webcam.open();
